@@ -1,0 +1,77 @@
+﻿==========================================================
+   SIMULACIËN CONCURRENTE: PEAJE DE AUTOPISTA            
+   (8 Pistas a 1 Caseta para Todos)                      
+==========================================================
+
+----------------------------------------------------------
+>>> INICIANDO PRUEBA: SIN SINCRONIZACIËN
+----------------------------------------------------------
+Auto-4 circulando por Pista 4...
+Auto-2 circulando por Pista 2...
+Moto-5 circulando por Pista 5...
+Camion-3 circulando por Pista 3...
+Camion-8 circulando por Pista 8...
+Camion-6 circulando por Pista 6...
+Auto-7 circulando por Pista 7...
+Moto-1 circulando por Pista 1...
+[Caseta Central 01] Atendiendo a Moto-1 de la Pista 1
+[Caseta Central 01] Atendiendo a Camion-8 de la Pista 8
+[Caseta Central 01] Atendiendo a Moto-5 de la Pista 5
+[Caseta Central 01] Atendiendo a Auto-4 de la Pista 4
+[Caseta Central 01] Atendiendo a Auto-7 de la Pista 7
+[Caseta Central 01] Atendiendo a Camion-6 de la Pista 6
+   Auto-4 pag¾ $1000 (Saldo previo: $0 -> Saldo Nuevo: $1000)
+   Auto-7 pag¾ $1000 (Saldo previo: $0 -> Saldo Nuevo: $1000)
+   Camion-8 pag¾ $3000 (Saldo previo: $0 -> Saldo Nuevo: $3000)
+   Moto-5 pag¾ $500 (Saldo previo: $0 -> Saldo Nuevo: $500)
+   Camion-6 pag¾ $3000 (Saldo previo: $0 -> Saldo Nuevo: $3000)
+   Moto-1 pag¾ $500 (Saldo previo: $0 -> Saldo Nuevo: $500)
+[Caseta Central 01] Atendiendo a Camion-3 de la Pista 3
+[Caseta Central 01] Atendiendo a Auto-2 de la Pista 2
+   Camion-3 pag¾ $3000 (Saldo previo: $3000 -> Saldo Nuevo: $6000)
+   Auto-2 pag¾ $1000 (Saldo previo: $3000 -> Saldo Nuevo: $4000)
+
+----------------------------------------------------------
+>>> CONCLUSIËN DE LA PRUEBA (SIN SINCRONIZACIËN)
+VehÝculos procesados: 8
+Monto total esperado: $13000
+Monto total registrado en caja: $4000
+Resultado: ERROR - CONDICIËN DE CARRERA DETECTADA (Se perdi¾ dinero).
+----------------------------------------------------------
+
+----------------------------------------------------------
+>>> INICIANDO PRUEBA: CON SINCRONIZACIËN
+----------------------------------------------------------
+Moto-1 circulando por Pista 1...
+Auto-2 circulando por Pista 2...
+Camion-3 circulando por Pista 3...
+Auto-4 circulando por Pista 4...
+Moto-5 circulando por Pista 5...
+Camion-6 circulando por Pista 6...
+Auto-7 circulando por Pista 7...
+Camion-8 circulando por Pista 8...
+[Caseta Central 01] Atendiendo a Auto-7 de la Pista 7
+[Caseta Central 01] Atendiendo a Moto-1 de la Pista 1
+   Auto-7 pag¾ $1000 (Saldo previo: $0 -> Saldo Nuevo: $1000)
+[Caseta Central 01] Atendiendo a Moto-5 de la Pista 5
+[Caseta Central 01] Atendiendo a Camion-8 de la Pista 8
+   Moto-1 pag¾ $500 (Saldo previo: $1000 -> Saldo Nuevo: $1500)
+[Caseta Central 01] Atendiendo a Camion-6 de la Pista 6
+   Camion-8 pag¾ $3000 (Saldo previo: $1500 -> Saldo Nuevo: $4500)
+[Caseta Central 01] Atendiendo a Camion-3 de la Pista 3
+[Caseta Central 01] Atendiendo a Auto-4 de la Pista 4
+[Caseta Central 01] Atendiendo a Auto-2 de la Pista 2
+   Moto-5 pag¾ $500 (Saldo previo: $4500 -> Saldo Nuevo: $5000)
+   Auto-2 pag¾ $1000 (Saldo previo: $5000 -> Saldo Nuevo: $6000)
+   Auto-4 pag¾ $1000 (Saldo previo: $6000 -> Saldo Nuevo: $7000)
+   Camion-3 pag¾ $3000 (Saldo previo: $7000 -> Saldo Nuevo: $10000)
+   Camion-6 pag¾ $3000 (Saldo previo: $10000 -> Saldo Nuevo: $13000)
+
+----------------------------------------------------------
+>>> CONCLUSIËN DE LA PRUEBA (CON SINCRONIZACIËN)
+VehÝculos procesados: 8
+Monto total esperado: $13000
+Monto total registrado en caja: $13000
+Resultado: FUNCIONAMIENTO CORRECTO (No se perdi¾ dinero).
+----------------------------------------------------------
+
