@@ -1,4 +1,11 @@
-# Simulación Concurrente: Peaje de Autopista (Casetas de Peaje)
+# 🚦 Simulación Concurrente: Peaje de Autopista
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Java-17%2B-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" />
+  <img src="https://img.shields.io/badge/Paradigma-Concurrencia_%7C_Multithreading-4B8BBE?style=for-the-badge" alt="Multithreading" />
+  <img src="https://img.shields.io/badge/Sincronizaci%C3%B3n-Mutex_%7C_Synchronized-2E7D32?style=for-the-badge" alt="Synchronized" />
+  <img src="https://img.shields.io/badge/Instituci%C3%B3n-USS_%F0%9F%87%A8%F0%9F%87%B1-1f4287?style=for-the-badge" alt="USS" />
+</p>
 
 Este proyecto simula el comportamiento de una **estación de peaje de autopista** donde múltiples vehículos (Motos, Autos y Camiones) transitan y realizan sus pagos de forma concurrente. El objetivo es modelar, simular y analizar conceptos del paradigma concurrente en Java utilizando la sintaxis básica y directa del curso.
 
@@ -66,3 +73,6 @@ Sin sincronización, la operación `saldo = saldoAnterior + tarifa` no es atómi
 1. **Exclusión Mutua (`synchronized`):** Se sincronizan las secciones críticas de la `CajaRegistradora` mediante un bloque `synchronized (this)` para garantizar que solo un hilo a la vez pueda realizar el proceso de suma de dinero al saldo, asegurando consistencia.
 
 ---
+
+## 👨‍💻 Autor
+Desarrollado por **Sebastián Orellana** ([@sepoba18](https://github.com/sepoba18)) — Universidad San Sebastián.
